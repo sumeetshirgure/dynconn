@@ -171,20 +171,28 @@ if __name__ == '__main__':
     for i in range(num_qubits):
         qc_main.append_gate(U3Gate(), i)
 
-    for _ in range(1) :
-        qc_main.append_gate(CZGate(), (0, 1))
+    for __ in range(1) :
+        qc_main.append_gate(CNOTGate(), (0, 1))
+        qc_main.append_gate(CNOTGate(), (2, 3))
         qc_main.append_gate(U3Gate(), 0)
         qc_main.append_gate(U3Gate(), 1)
-        qc_main.append_gate(CZGate(), (2, 3))
         qc_main.append_gate(U3Gate(), 2)
         qc_main.append_gate(U3Gate(), 3)
 
-        qc_main.append_gate(CZGate(), (1, 2))
+        qc_main.append_gate(CNOTGate(), (1, 2))
+        qc_main.append_gate(CNOTGate(), (3, 4))
         qc_main.append_gate(U3Gate(), 1)
         qc_main.append_gate(U3Gate(), 2)
-        qc_main.append_gate(CZGate(), (3, 4))
         qc_main.append_gate(U3Gate(), 3)
         qc_main.append_gate(U3Gate(), 4)
+
+    qc_main.append_gate(CNOTGate(), (0, 1))
+    qc_main.append_gate(CNOTGate(), (2, 3))
+    qc_main.append_gate(U3Gate(), 0)
+    qc_main.append_gate(U3Gate(), 1)
+    qc_main.append_gate(U3Gate(), 2)
+    qc_main.append_gate(U3Gate(), 3)
+
 
     qc_main.append_gate(CZGate(), (0, 1))
     qc_main.append_gate(U3Gate(), 0)

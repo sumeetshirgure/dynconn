@@ -171,11 +171,11 @@ if __name__ == '__main__':
     qc_main = Circuit(num_qubits)
     for i in range(num_qubits):
         qc_main.append_gate(U3Gate(), i)
-    qc_main.append_gate(CZGate(), (0, 1))
-    qc_main.append_gate(CZGate(), (2, 3))
+    qc_main.append_gate(CXGate(), (0, 1))
+    qc_main.append_gate(CXGate(), (2, 3))
     for i in range(num_qubits):
         qc_main.append_gate(U3Gate(), i)
-    qc_main.append_gate(CZGate(), (1, 2))
+    qc_main.append_gate(CXGate(), (1, 2))
     qc_main.append_gate(U3Gate(), 1)
     qc_main.append_gate(U3Gate(), 2)
 
