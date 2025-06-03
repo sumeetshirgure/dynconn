@@ -187,12 +187,12 @@ if __name__ == '__main__':
         qc_main.append_gate(U3Gate(), 3)
 
 
-    qc_main.append_gate(CXGate(), (1, 2))
-    qc_main.append_gate(U3Gate(), 1)
-    qc_main.append_gate(U3Gate(), 2)
-    qc_main.append_gate(CXGate(), (3, 4))
-    qc_main.append_gate(U3Gate(), 3)
-    qc_main.append_gate(U3Gate(), 4)
+    # qc_main.append_gate(CXGate(), (1, 2))
+    # qc_main.append_gate(U3Gate(), 1)
+    # qc_main.append_gate(U3Gate(), 2)
+    # qc_main.append_gate(CXGate(), (3, 4))
+    # qc_main.append_gate(U3Gate(), 3)
+    # qc_main.append_gate(U3Gate(), 4)
 
     # Branch circuits
     ancillas = [1, 3]
