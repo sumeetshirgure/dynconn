@@ -14,7 +14,7 @@ from bqskit.ir.gates import SwapGate
 from scipy.optimize import minimize
 import qiskit
 
-from acdc import unpack_params, cost_function, grad_function
+from acdc import unpack_params, get_composite_unitary, cost_function, grad_function
 
 if __name__ == '__main__':
 
